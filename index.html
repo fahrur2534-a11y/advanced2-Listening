@@ -1,127 +1,367 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About My Family - Writing Exercise</title>
+<title>Advanced Listening Task - Why Do Animals Do Nothing?</title>
 
 <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    background:#f4f6f9;
+    font-family:Arial, sans-serif;
+    background:#f4f7fb;
+    color:#333;
+    line-height:1.7;
+    padding:20px;
 }
 
 .container{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.1);
+    max-width:1100px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
-h1,h2{
+h1{
+    text-align:center;
     color:#2c3e50;
+    margin-bottom:10px;
 }
 
-textarea{
-    width:100%;
-    min-height:120px;
-    padding:10px;
-    margin-top:10px;
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:20px;
 }
 
-input{
-    padding:8px;
-    margin:5px;
+.video-link{
+    background:#eef6ff;
+    padding:15px;
+    border-radius:8px;
+    margin-bottom:25px;
+}
+
+.video-link a{
+    color:#2980b9;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.instructions{
+    background:#f8f9fa;
+    padding:15px;
+    border-left:5px solid #3498db;
+    margin-bottom:25px;
+    border-radius:8px;
+}
+
+.question{
+    background:#fafafa;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:8px;
+}
+
+.question p{
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+label{
+    display:block;
+    margin:8px 0;
+    cursor:pointer;
 }
 
 button{
+    width:100%;
+    padding:15px;
     background:#3498db;
     color:white;
     border:none;
-    padding:12px 20px;
-    border-radius:5px;
+    border-radius:8px;
     cursor:pointer;
+    font-size:16px;
+    margin-top:20px;
 }
 
 button:hover{
     background:#2980b9;
 }
 
+#result{
+    margin-top:25px;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.answer-key{
+    margin-top:40px;
+    background:#f9f9f9;
+    padding:20px;
+    border-radius:10px;
+}
+
+.answer-key h2{
+    margin-bottom:15px;
+    color:#2c3e50;
+}
+
+.answer-key ul{
+    margin-left:20px;
+}
+
 .correct{
     color:green;
-    font-weight:bold;
 }
 
 .wrong{
     color:red;
-    font-weight:bold;
 }
+
 </style>
 </head>
 <body>
 
 <div class="container">
 
-<hr>
+<h1>ADVANCED 2 LISTENING TASK</h1>
 
-<h2>Part A: Fill in the blanks</h2>
+<div class="subtitle">
+Topic: Why Do Animals Do Nothing?<br>
+Level: Advanced Senior High School
+</div>
 
-<p>1. Kelly lives in
-<input id="q1"></p>
+<div class="video-link">
+Video:
+<a href="https://youtu.be/Y681hXWwhQY?si=DZtESYuG20f7lSwr" target="_blank">
+Watch on YouTube
+</a>
+</div>
 
-<p>2. Kelly's mother's name is
-<input id="q2"></p>
+<div class="instructions">
+<strong>Instructions:</strong><br>
+Listen carefully to the audio. Choose the best answer (a, b, c, or d) for each question.
+</div>
 
-<p>3. Kelly's father works in a
-<input id="q3"></p>
+<form id="quizForm">
 
-<p>4. Kelly's sister loves listening to
-<input id="q4"></p>
+<h2>Multiple Choice Questions</h2>
 
-<p>5. Brandy is a pet
-<input id="q5"></p>
+<div class="question">
+<p>1. How does Neil describe his day?</p>
+<label><input type="radio" name="q1" value="a"> a. Relaxing and enjoyable</label>
+<label><input type="radio" name="q1" value="b"> b. Busy and exhausting</label>
+<label><input type="radio" name="q1" value="c"> c. Boring and repetitive</label>
+<label><input type="radio" name="q1" value="d"> d. Productive and exciting</label>
+</div>
 
-<button onclick="checkAnswers()">Check Answers</button>
+<div class="question">
+<p>2. What does Beth claim she has been doing?</p>
+<label><input type="radio" name="q2" value="a"> a. Working on several projects</label>
+<label><input type="radio" name="q2" value="b"> b. Watching nature documentaries</label>
+<label><input type="radio" name="q2" value="c"> c. Relaxing and doing very little</label>
+<label><input type="radio" name="q2" value="d"> d. Looking after children</label>
+</div>
 
-<p id="result"></p>
+<div class="question">
+<p>3. What common belief about animals is mentioned?</p>
+<label><input type="radio" name="q3" value="a"> a. Animals are highly intelligent</label>
+<label><input type="radio" name="q3" value="b"> b. Animals spend most of their lives sleeping</label>
+<label><input type="radio" name="q3" value="c"> c. Animals are constantly active</label>
+<label><input type="radio" name="q3" value="d"> d. Animals dislike human contact</label>
+</div>
 
-<hr>
+<div class="question">
+<p>4. What is the surprising truth about many animals?</p>
+<label><input type="radio" name="q4" value="a"> a. They spend most of their time hunting</label>
+<label><input type="radio" name="q4" value="b"> b. They spend much of their time doing nothing</label>
+<label><input type="radio" name="q4" value="c"> c. They avoid social interaction</label>
+<label><input type="radio" name="q4" value="d"> d. They migrate regularly</label>
+</div>
 
-<h2>Part B: Write About Your Family</h2>
+<div class="question">
+<p>5. What question does the program mainly explore?</p>
+<label><input type="radio" name="q5" value="a"> a. Why animals compete with each other</label>
+<label><input type="radio" name="q5" value="b"> b. How animals communicate</label>
+<label><input type="radio" name="q5" value="c"> c. Why some animals have evolved to do nothing</label>
+<label><input type="radio" name="q5" value="d"> d. How animals protect themselves</label>
+</div>
 
-<p>Write 5–8 sentences about your family.</p>
+<div class="question">
+<p>6. What does the phrase "busy as a bee" mean?</p>
+<label><input type="radio" name="q6" value="a"> a. Being confused</label>
+<label><input type="radio" name="q6" value="b"> b. Being energetic and hardworking</label>
+<label><input type="radio" name="q6" value="c"> c. Being noisy</label>
+<label><input type="radio" name="q6" value="d"> d. Being careless</label>
+</div>
 
-<textarea placeholder="My name is..."></textarea>
+<div class="question">
+<p>7. Which animal is mentioned as sleeping up to twenty hours a day?</p>
+<label><input type="radio" name="q7" value="a"> a. Koala</label>
+<label><input type="radio" name="q7" value="b"> b. Sloth</label>
+<label><input type="radio" name="q7" value="c"> c. Giant tortoise</label>
+<label><input type="radio" name="q7" value="d"> d. Lion</label>
+</div>
+
+<div class="question">
+<p>8. What evidence challenges the idea that all ants are hardworking?</p>
+<label><input type="radio" name="q8" value="a"> a. Ants spend all day collecting food</label>
+<label><input type="radio" name="q8" value="b"> b. Half of the ants in a nest may remain motionless</label>
+<label><input type="radio" name="q8" value="c"> c. Ants sleep for twenty hours a day</label>
+<label><input type="radio" name="q8" value="d"> d. Ants rarely cooperate</label>
+</div>
+
+<div class="question">
+<p>9. What is Beth's purpose in asking about the slowest-moving animal?</p>
+<label><input type="radio" name="q9" value="a"> a. To test Neil's knowledge</label>
+<label><input type="radio" name="q9" value="b"> b. To compare humans and animals</label>
+<label><input type="radio" name="q9" value="c"> c. To explain evolution</label>
+<label><input type="radio" name="q9" value="d"> d. To discuss climate change</label>
+</div>
+
+<div class="question">
+<p>10. Which statement best summarizes the introduction?</p>
+<label><input type="radio" name="q10" value="a"> a. Animals are generally more active than humans</label>
+<label><input type="radio" name="q10" value="b"> b. Resting may play a significant role in animal survival</label>
+<label><input type="radio" name="q10" value="c"> c. Nature documentaries exaggerate animal intelligence</label>
+<label><input type="radio" name="q10" value="d"> d. Human laziness and animal laziness are identical</label>
+</div>
+
+<h2 style="margin-top:30px;">True or False</h2>
+
+<div class="question">
+<p>11. Neil says he feels exhausted because he has had a busy day.</p>
+<label><input type="radio" name="q11" value="T"> True</label>
+<label><input type="radio" name="q11" value="F"> False</label>
+</div>
+
+<div class="question">
+<p>12. Beth believes that all animals are constantly active.</p>
+<label><input type="radio" name="q12" value="T"> True</label>
+<label><input type="radio" name="q12" value="F"> False</label>
+</div>
+
+<div class="question">
+<p>13. The program discusses whether being lazy could also benefit humans.</p>
+<label><input type="radio" name="q13" value="T"> True</label>
+<label><input type="radio" name="q13" value="F"> False</label>
+</div>
+
+<div class="question">
+<p>14. Lions are described as animals that can sleep for only a few hours each day.</p>
+<label><input type="radio" name="q14" value="T"> True</label>
+<label><input type="radio" name="q14" value="F"> False</label>
+</div>
+
+<div class="question">
+<p>15. Around half of the ants in a nest may be inactive at a given time.</p>
+<label><input type="radio" name="q15" value="T"> True</label>
+<label><input type="radio" name="q15" value="F"> False</label>
+</div>
+
+<button type="button" onclick="checkAnswers()">Submit Answers</button>
+
+</form>
+
+<div id="result"></div>
+
+<div class="answer-key">
+
+<h2>Answer Key</h2>
+
+<strong>Multiple Choice</strong>
+<ul>
+<li>1. b</li>
+<li>2. c</li>
+<li>3. c</li>
+<li>4. b</li>
+<li>5. c</li>
+<li>6. b</li>
+<li>7. d</li>
+<li>8. b</li>
+<li>9. a</li>
+<li>10. b</li>
+</ul>
+
+<br>
+
+<strong>True or False</strong>
+<ul>
+<li>11. True</li>
+<li>12. False</li>
+<li>13. True</li>
+<li>14. False</li>
+<li>15. True</li>
+</ul>
+
+</div>
 
 </div>
 
 <script>
+
 function checkAnswers(){
 
-let score = 0;
-
 const answers = {
-q1:"california",
-q2:"carmen",
-q3:"bank",
-q4:"music",
-q5:"dog"
+q1:"b",
+q2:"c",
+q3:"c",
+q4:"b",
+q5:"c",
+q6:"b",
+q7:"d",
+q8:"b",
+q9:"a",
+q10:"b",
+q11:"T",
+q12:"F",
+q13:"T",
+q14:"F",
+q15:"T"
 };
 
-for(let id in answers){
-let user = document.getElementById(id).value.trim().toLowerCase();
+let score = 0;
+let total = 15;
 
-if(user === answers[id]){
+for(let key in answers){
+
+const selected = document.querySelector(`input[name="${key}"]:checked`);
+
+if(selected){
+
+if(selected.value === answers[key]){
 score++;
 }
+
 }
 
-document.getElementById("result").innerHTML =
-"You got " + score + " out of 5 correct!";
 }
+
+const percentage = Math.round((score/total)*100);
+
+const result = document.getElementById("result");
+
+result.innerHTML =
+`Score: ${score} / ${total} (${percentage}%)`;
+
+if(score >= 12){
+result.className = "correct";
+}else{
+result.className = "wrong";
+}
+
+}
+
 </script>
 
 </body>
